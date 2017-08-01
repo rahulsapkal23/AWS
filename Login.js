@@ -1,7 +1,11 @@
 import React, {Component} from 'react';
 
-import { StyleSheet, Text, TextInput, View, Image, TouchableHighlight, TouchableNativeFeedback } from 'react-native';
+import { StyleSheet, Text, TextInput, View, Image, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+
+
+
+
 const styles = StyleSheet.create({
 
   Imgcontainer: {
@@ -16,8 +20,8 @@ const styles = StyleSheet.create({
       marginLeft:20,
       marginRight:20,
       marginBottom:20,
-      // borderColor: 'honeydew',
-      // borderWidth: 1,
+      borderColor: 'honeydew',
+      borderWidth: 1,
       backgroundColor: 'transparent',
       flex: 1,
       flexDirection: 'column',
@@ -26,6 +30,7 @@ const styles = StyleSheet.create({
       fontSize: 20,
       fontWeight: 'bold',
       height:20,
+
       left:15,
       top:10,
       color:'white'
@@ -72,19 +77,25 @@ const styles = StyleSheet.create({
     top:100
 
   },
+  TxtFont:{
+    color: 'honeydew',
+    
+    fontSize: 20,
+   
+  },
+  plusText:
+  {left:20,alignItems: 'center',paddingLeft:10, color:'white',fontSize: 25,height:40,width:40, borderWidth: 1, borderColor: 'white', backgroundColor: 'red'},
+  VWcontainer2:
+  {top:'85%',width:'100%', left:0,height:50,borderWidth: 1, borderColor: 'white', backgroundColor: 'transparent',flexDirection: 'row',alignItems: 'center'}
 
 });
 
-class Button extends Component{
-  render(){
-    return(
-      <View style={styles.BtnContainer}>
-          <Text style={styles.BtnTxt}>LOGIN</Text>
-          </View>
-    );
-  }
-}
+
 export default class Login extends React.Component {
+
+
+
+
   render() {
 
     return (
@@ -94,17 +105,26 @@ export default class Login extends React.Component {
                         <Text style={styles.bigWhite}>NeoSTORE</Text>
                         <View style={styles.border1}>
                               <Icon name="user" style={styles.TxtIP} color="white" />
-                            <TextInput style={styles.TxtIP} left={25} placeholderTextColor='honeydew' placeholder="Username" />
+                            <TextInput  style={styles.TxtIP} left={25} width={100} underlineColorAndroid={'transparent'} placeholderTextColor='honeydew' placeholder="Username" />
                         </View>
                         <View style={styles.border2}>
                           <Icon name="lock" style={styles.TxtIP} color="white" />
-                          <TextInput style={styles.TxtIP} left={25} placeholderTextColor='honeydew' secureTextEntry={true} placeholder="Password" />
+                          <TextInput  style={styles.TxtIP} left={25} width={100} underlineColorAndroid={'transparent'} placeholderTextColor='honeydew' secureTextEntry={true} placeholder="Password" />
                         </View>
 
-                        <Button/>
-
-
+                        <TouchableOpacity style={styles.BtnContainer}>
+                            <Text style={styles.BtnTxt}>LOGIN</Text>
+                         </TouchableOpacity>
+                        <TouchableOpacity style={{alignItems: 'center',top:190,height:25}} >
+                         <Text style={styles.TxtFont}>Forgot Password ?</Text>
+                        </TouchableOpacity>
+                        
+                        <View style={styles.VWcontainer2}>
+                           <Text style={styles.TxtFont} paddingTop={10}>DON'T HAVE AN ACCOUNT ?</Text>     
+                                 <Text style={styles.plusText}>+</Text>         
+                                         
                         </View>
+                        </View> 
               </Image>
 
 
