@@ -11,8 +11,6 @@ const styles = StyleSheet.create({
   Imgcontainer: {
       height:'100%',
       width:'100%',
-
-
   },
   VWcontainer: {
       alignItems: 'center',
@@ -20,8 +18,8 @@ const styles = StyleSheet.create({
       marginLeft:20,
       marginRight:20,
       marginBottom:20,
-      borderColor: 'honeydew',
-      borderWidth: 1,
+      // borderColor: 'honeydew',
+      // borderWidth: 1,
       backgroundColor: 'transparent',
       flex: 1,
       flexDirection: 'column',
@@ -30,7 +28,6 @@ const styles = StyleSheet.create({
       fontSize: 20,
       fontWeight: 'bold',
       height:20,
-
       left:15,
       top:10,
       color:'white'
@@ -66,8 +63,6 @@ const styles = StyleSheet.create({
     color: 'red',
     fontWeight: 'bold',
     fontSize: 25,
-
-
   },
 
   bigWhite: {
@@ -79,14 +74,30 @@ const styles = StyleSheet.create({
   },
   TxtFont:{
     color: 'honeydew',
-    
     fontSize: 20,
-   
   },
-  plusText:
-  {left:20,alignItems: 'center',paddingLeft:10, color:'white',fontSize: 25,height:40,width:40, borderWidth: 1, borderColor: 'white', backgroundColor: 'red'},
+  plusText:{
+      left:20,
+      alignItems: 'center',
+      height:40,
+      width:40,
+      alignItems: 'center',
+      // borderWidth: 1, 
+      // borderColor: 'white', 
+      backgroundColor: 'red'
+    },
   VWcontainer2:
-  {top:'85%',width:'100%', left:0,height:50,borderWidth: 1, borderColor: 'white', backgroundColor: 'transparent',flexDirection: 'row',alignItems: 'center'}
+  {
+    top:'85%',
+    width:'100%', 
+    left:0,
+    height:60,
+    // borderWidth: 1, 
+    // borderColor: 'white', 
+    backgroundColor: 'transparent',
+    flexDirection: 'row',
+    alignItems: 'center'
+  }
 
 });
 
@@ -120,8 +131,11 @@ export default class Login extends React.Component {
                         </TouchableOpacity>
                         
                         <View style={styles.VWcontainer2}>
-                           <Text style={styles.TxtFont} paddingTop={10}>DON'T HAVE AN ACCOUNT ?</Text>     
-                                 <Text style={styles.plusText}>+</Text>         
+                           <Text style={styles.TxtFont} >DON'T HAVE AN ACCOUNT ?</Text>     
+                            <TouchableOpacity style={styles.plusText} >
+                                    <Text style={{color:'white',fontSize: 30,}}>+</Text>  
+                        </TouchableOpacity>
+                                        
                                          
                         </View>
                         </View> 
